@@ -408,16 +408,16 @@ p { color: var(--color-text-muted); }
   opacity: 1;
   filter: grayscale(0%);
 }
-.client-logo-item {
-  font-size: 1.5rem;
-  font-weight: 800;
-  color: var(--color-text-muted);
-  letter-spacing: -0.05em;
-  padding: 1rem 2rem;
-  background: white;
-  border-radius: var(--radius-sm);
-  box-shadow: var(--shadow-soft);
-  border: 1px solid var(--color-border);
+.client-logo-img {
+  height: 60px;
+  width: auto;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(70%);
+  transition: var(--transition-smooth);
+}
+.client-logo-img:hover {
+  filter: grayscale(0%) opacity(100%);
+  transform: scale(1.05);
 }
 
 /* Metrics / Stats */
