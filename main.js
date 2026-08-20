@@ -56,4 +56,41 @@ document.addEventListener('DOMContentLoaded', () => {
       link.rel = "noopener noreferrer";
     }
   });
+
+  // Contact Form Submission (WhatsApp)
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+      
+      const waText = `Halo Tim NHG, saya ingin berkonsultasi.\n\n*Nama:* ${name}\n*Email:* ${email}\n*Minat Layanan:* ${service}\n*Pesan:*\n${message}`;
+      
+      const submitWaUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(waText)}`;
+      window.open(submitWaUrl, '_blank');
+    });
+  }
+
+  // FAQ Accordion Logic
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    if (question) {
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all items
+        faqItems.forEach(i => i.classList.remove('active'));
+        
+        // If the clicked item wasn't active, open it
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    }
+  });
 });
