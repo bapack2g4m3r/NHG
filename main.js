@@ -1,7 +1,7 @@
 import './style.css';
 
 // Configurable WhatsApp Number
-const WHATSAPP_NUMBER = "6281802076366";
+const WHATSAPP_NUMBER = "6281284416840";
 const WHATSAPP_MESSAGE = "Halo Tim NHG, saya ingin berkonsultasi mengenai layanan Anda.";
 
 document.addEventListener('DOMContentLoaded', () => {
