@@ -304,6 +304,17 @@ p { color: var(--color-text-muted); }
   flex-direction: column;
   align-items: center;
 }
+.ig-banner-subtitle {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin-bottom: 0.75rem;
+}
+.banner-modern .ig-banner-subtitle {
+  color: rgba(255, 255, 255, 0.6);
+}
 .ig-banner-card {
   display: inline-flex;
   align-items: center;
